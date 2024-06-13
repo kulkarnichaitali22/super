@@ -1,0 +1,23 @@
+<div class="container bg-info" *ngFor="let i of employee_info">
+    <p class="text-black">{{i.empno}} {{i.empname}} {{i.country}} {{i.position}}</p>
+    <hr>
+</div>
+<div class="container">
+    <table class="table table-bordered w-75 p-5" style="margin: auto;">
+
+        <tr>
+            <th>Employee number</th>
+            <th>Employee name</th>
+            <th>Employee country</th>
+            <th>Employee position</th>
+        </tr>
+
+        <tr *ngFor="let emp of employee_info">
+            <td>{{emp.empno}}</td>
+            <td>{{emp.empname}}</td>
+            <td>{{emp.country}}</td>
+            <td>{{emp.position}}</td>
+        </tr>
+
+    </table>
+</div>

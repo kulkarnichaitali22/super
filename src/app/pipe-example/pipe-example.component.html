@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>Pipe Example</h1>
+    <hr>
+
+    <h4 class="text-success">Title (upper case) :- {{title | uppercase}}</h4>
+    <h4 class="text-info">Title (lower case) :- {{title | lowercase}}</h4>
+    <h4 class="text-warning">Title (camel case) :- {{title | titlecase}}</h4>
+    <h4 class="text-secondary">Today's date :- {{today_date | date}}</h4>
+    <h4 class="text-primary">Today's date(parametrized pipe) :- {{today_date | date:'d/M/y'}}</h4>
+    <h4 class="text-danger">Today's date(Chaining pipe) :- {{today_date | date | uppercase}}</h4>
+    <h4 class="text-success">Json :-{{jsonval | json}}</h4>
+    <h4 class="text-info"> Month names :- {{months | slice : 1:4}}</h4>
+    <h4 class="text-warning">Currency :- {{123456 | currency:'USD'}}</h4>
+    <h4 class="text-secondary">Currency :- {{123456 | currency:'INR'}}</h4>
+
+    <hr>
+    <h1 class="text-center">User Defined pipe</h1>
+
+    <h4 class="text-primary">Power of number is :- {{2 | power: 5}}</h4>
+    <hr>
+    <h1 class="text-center">User defined exmaple 2</h1>
+
+    <table class="table table-bordered p-4 w-50" align="center" [cellSpacing]="6">
+        <tr>
+            <td>Name</td>
+            <td>salary</td>
+            <td>Gender</td>
+        </tr>
+        <tr *ngFor="let i of emp">
+            <td>{{i.name | genderPipe : i.gender}}</td>
+            <td>{{i.salary}}</td>
+            <td>{{i.gender}}</td>
+        </tr>
+    </table>
+    
+</div>

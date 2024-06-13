@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { concat } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'FirstProject';
+
+  constructor(private route : Router){}
+
+  home()
+  {
+    this.route.navigate(['/Home'])
+  }
+  about()
+  {
+    this.route.navigate(['/About'])
+  }
+  contact()
+  {
+    this.route.navigate(['/Contact'])
+  }
 }

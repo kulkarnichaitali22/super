@@ -1,0 +1,17 @@
+<div class="container">
+    <h2 class="text-warning"> Student Information</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr *ngFor="let i of stud">
+            <td>{{i.id}}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.Marks}}</td>
+        </tr>
+
+    </table>
+</div>

@@ -1,0 +1,10 @@
+h1{
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+p{
+    color: blueviolet;
+    font-size: larger;
+}
